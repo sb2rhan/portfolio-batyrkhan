@@ -1,73 +1,62 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Alejandro Múnez — Mobile & Web Developer",
-  author: "Alejandro Múnez Cuntez",
+  title: "Batyrkhan Sharipbay — Backend Developer & ML Engineer",
+  author: "Batyrkhan Sharipbay",
   description:
-    "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
+    "Software Engineer based in Almaty, Kazakhstan. Interested in Web development and ML research.",
   lang: "en",
-  siteLogo: "/alejandro-small.jpg",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
     { text: "About", href: "#about" },
   ],
   socialLinks: [
-    { text: "Twitter", href: "https://github.com/immois/astro-zen" },
-    { text: "LinkedIn", href: "https://github.com/immois/astro-zen" },
-    { text: "Github", href: "https://github.com/immois/astro-zen" },
-    { text: "Youtube", href: "https://github.com/immois/astro-zen" },
-    { text: "Dribbble", href: "https://github.com/immois/astro-zen" },
+    { text: "LinkedIn", href: "https://www.linkedin.com/in/batyrkhan-sharipbay/" },
+    { text: "Github", href: "https://github.com/sb2rhan" },
   ],
-  socialImage: "/zen-og.png",
   canonicalURL: "https://astro-zen.vercel.app",
 };
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
-    name: "Alejandro Múnez",
-    specialty: "Mobile & Web Developer",
+    name: "Batyrkhan Sharipbay",
+    specialty: "Backend Developer & ML Engineer",
     summary:
-      "Developer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
-    email: "example@email.com",
+      "Software Engineer based in Almaty, Kazakhstan. Interested in Web development and ML research.",
+    email: "batyrkhan.sharipbay@nu.edu.kz",
   },
   experience: [
     {
-      company: "Zalmart",
-      position: "Lead Android Developer",
-      startDate: "May 2018",
-      endDate: "Sept 2020",
+      company: "Nazarbayev University",
+      position: "Research Assistant",
+      startDate: "Nov 2024",
+      endDate: "Present",
       summary: [
-        "Implemented advanced memory management and code optimization techniques, resulting in a reduction in application load time by 40% and a decrease in crashes by 25%. This significantly improved user experience and increased user retention by 20%.",
-        "I led a team of developers in building and integrating new features using Jetpack Android components such as LiveData and ViewModel. This enabled us to build scalable and maintainable applications, reducing the crash rate by 20% and speeding up the time to delivery of new features by 15%.",
-        "Integrated Google Pay for in-app purchases, resulting in a 35% increase in mobile transaction revenue. Additionally, implemented Firebase Analytics to gain insights into user behavior, enabling data-driven optimizations and a 30% increase in user retention.",
+        "Researching the application of Fuzzy Logic in medical AI to improve explainability under the guidance of Professor Adnan Yazici.",
+        "Implemented ANFIS with Beetle Swarm Optimization algorithm using PyTorch, increasing the accuracy rates to >95% in classification tasks.",
       ],
     },
     {
-      company: "Bankit",
-      position: "Mobile Developer",
-      startDate: "Feb 2017",
-      endDate: "May 2018",
+      company: "NU Rover Team",
+      position: "Lead Software Engineer",
+      startDate: "Apr 2023",
+      endDate: "Jan 2025",
       summary: [
-        "I designed and developed a mobile application using Flutter, allowing it to be deployed on both Android and iOS with a single codebase. This reduced development time by 50% and maintenance costs by 30%, facilitating a consistent user experience on both platforms.",
-        "I integrated biometric authentication and data encryption, significantly improving the security of user data. This implementation resulted in a 40% increase in user trust and a 25% reduction in unauthorized access attempts.",
+        "Created and hosted the team website at aspanrover.kz using React and Tailwind CSS. This improved team visibility and communication, leading to a 50% increase in engagement from potential new members.",
+        "Deployed a WebSocket server to connect the Console app with the Rover, using AWS API Gateway, Lambda, and DynamoDB. This enabled real-time data transmission and control, enhancing the Rover's operational efficiency.",
+        "Developed a Console app using React and Tailwind CSS to control the Rover, providing a user-friendly interface for team members to interact with the Rover's systems.",
+        "Helped with writing WebRTC ROS module for Rover in Python, enabling real-time video streaming and remote control capabilities.",
+        "Organized meetings in the Software Team regarding future software implementations.",
       ],
-    },
-    {
-      company: "Driveer",
-      position: "Frontend Developer",
-      startDate: "Jun 2015",
-      endDate: "Oct 2016",
-      summary:
-        "Developed and integrated a real-time vehicle tracking system using WebSockets, improving accuracy and data update in the application. This functionality increased user satisfaction by 30% and reduced customer service inquiries by 25%.",
     },
   ],
   projects: [
     {
-      name: "Spotifu Music",
-      summary: "A music streaming app that emulates Spotify's core features.",
+      name: "Point of Sale (PoS) system with Dashboard",
+      summary: "A comprehensive PoS system with an intuitive dashboard for sales tracking and inventory management.",
       linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
+      linkSource: "https://github.com/sb2rhan/PoSSystem.git",
       image: "/spotifu.png",
     },
     {
@@ -77,22 +66,16 @@ export const SITE_CONTENT: SiteContent = {
       linkSource: "https://github.com/immois/astro-zen",
       image: "/shopify-clon.png",
     },
-    {
-      name: "ClonTagram",
-      summary: "A social network that replicates the features of Instagram",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/clone-ig.png",
-    },
   ],
   about: {
     description: `
-      Hi, I’m Alejandro Múnez, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in both Android and iOS development, as well as front-end web technologies, I thrive in the intersection where creativity meets technology.
+      Hi, I am Batyrkhan Sharipbay, a passionate Backend Developer and ML Engineer.
+      I have an experience in .NET and Python, as well as front-end frameworks like React and Angular.
+      I am interested in learning new technologies and applying them in real-world projects.
 
-      Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
+      Currently, focused on web development and machine learning research, and I am always eager
+      to learn new technologies and improve my skills.
     `,
-    image: "/alejandro-big.jpg",
+    image: "/batyrkhan-big.jpg",
   },
 };
-
-// #5755ff

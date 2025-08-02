@@ -4,10 +4,10 @@
   --font-sans: "Be Vietnam Pro", system-ui, sans-serif;
   --font-serif: "Gabarito Variable", ui-serif, serif;
 
-  --color-primary: #2563eb;
-  --color-neutral: #94a3b8;
-  --color-white: #e2e8f0;
-  --color-black: #0e141b;
+  --color-primary: #7f9c66;   /* Olive green accent */
+  --color-neutral: #e5e7eb;   /* Pale gray for backgrounds or borders */
+  --color-white: #fefdfb;     /* Warm light background */
+  --color-black: #1c1c1c;     /* Matte black for text */
 
   --text-xs: 0.875rem;
   --text-xs--line-height: 1.125rem;
