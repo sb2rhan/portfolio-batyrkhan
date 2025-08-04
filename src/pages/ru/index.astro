@@ -1,0 +1,17 @@
+---
+import { SITE_CONTENT_RU, SITE_CONFIG_RU } from "@config";
+import Hero from "@components/Hero.astro";
+import Layout from "@layouts/Layout.astro";
+import Experience from "@components/Experience.astro";
+import Projects from "@components/Projects.astro";
+import About from "@components/About.astro";
+
+import "../../styles/global.css";
+---
+
+<Layout config={SITE_CONFIG_RU}>
+  <Hero {...SITE_CONTENT_RU.hero} action="Связаться со мной" />
+  <Experience experience={SITE_CONTENT_RU.experience} header="Опыт работы" />
+  <Projects projects={SITE_CONTENT_RU.projects} header="Мои проекты" />
+  <About {...SITE_CONTENT_RU.about} name={SITE_CONTENT_RU.hero.name} header="О себе"/>
+</Layout>

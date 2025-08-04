@@ -5,46 +5,44 @@ import "@fontsource-variable/gabarito";
 import { SITE_CONFIG } from "@config";
 import Footer from "@components/Footer.astro";
 
-const {
-  title,
-  description,
-  navLinks,
-  lang,
-  author,
-  socialLinks,
-  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
-} = SITE_CONFIG;
+
+
+type Props = {
+  config: typeof SITE_CONFIG;
+};
+
+const { config } = Astro.props;
 
 ---
 
 <!doctype html>
-<html lang={lang} class="scroll-pt-16 scroll-smooth">
+<html lang={config?.lang} class="scroll-pt-16 scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="author" content={author} />
+    <meta name="description" content={config?.description} />
+    <meta name="author" content={config?.author} />
     <meta name="viewport" content="width=device-width" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{config?.title}</title>
 
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={config?.title} />
+    <meta property="og:description" content={config?.description} />
+    <meta property="og:url" content={config?.canonicalURL} />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
+    <meta property="twitter:url" content={config?.canonicalURL} />
+    <meta property="twitter:title" content={config?.title} />
+    <meta property="twitter:description" content={config?.description} />
   </head>
   <body class="bg-black font-sans">
-    <Header navLinks={navLinks} />
+    <Header navLinks={config?.navLinks} />
     <main class="mx-auto max-w-3xl px-5">
       <slot />
     </main>
-    <Footer author={author} socialLinks={socialLinks} />
+    <Footer author={config?.author} socialLinks={config?.socialLinks} />
   </body>
 </html>
